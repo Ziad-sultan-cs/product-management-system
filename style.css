@@ -1,8 +1,6 @@
-
 *{
     margin: 0;
     padding: 0;
-   box-sizing: border-box;
 }
 body{
     background: #222;
@@ -32,25 +30,19 @@ input{
     padding: 4px;
     color:#fff;
 }
-.price input {
-    width: 20%;
-    min-width: 60px;
-    display: flex;
-    flex-wrap: wrap;   
-    gap: 4px;
-}
 input:focus{
 background: #000000;
-
+transform: scale(1.1);
 }
-
+.price input{
+    width: 20%;
+}
 #total{
     
     background: #850264;
     padding: 5px 2px;
     border-radius: 4px;
-    width: auto;
-    display: inline-block;
+    width: 250px;
 }
 #total::before{
 content: 'total: ';
@@ -63,7 +55,7 @@ button{
     background: #7d019f;
     color: #fff;
     border-radius: 20px;
-    transition: 0.5s;
+    transition: 0.5;
 }
 button:hover{
 background: #9f018f;
@@ -87,26 +79,4 @@ table th{
 }
 table th,td{
     padding: 5px;
-}
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 20px;
-}
-/* استجابة التصميم للموبايل */
-@media (max-width: 600px) {
-    .crud {
-        width: 95%; /* توسيع المساحة في الشاشات الصغيرة */
-    }
-    
-    .price {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-    
-    .price input {
-        flex: 1; /* جعل مدخلات الأسعار تتقاسم المساحة تلقائياً */
-        width: 100%;
-    }
 }
