@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-border-box;
+   box-sizing: border-box;
 }
 body{
     background: #222;
@@ -34,15 +34,16 @@ input{
 }
 .price input {
     width: 20%;
-    min-width: 60px; /* يمنع المدخلات إنها تصغر زيادة عن اللزوم */
+    min-width: 60px;
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 4px;
 }
 input:focus{
 background: #000000;
 
 }
-.price input{
-    width: 20%;
-}
+
 #total{
     
     background: #850264;
@@ -62,7 +63,7 @@ button{
     background: #7d019f;
     color: #fff;
     border-radius: 20px;
-    transition: 0.5;
+    transition: 0.5s;
 }
 button:hover{
 background: #9f018f;
