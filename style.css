@@ -1,6 +1,8 @@
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-border-box;
 }
 body{
     background: #222;
@@ -30,9 +32,13 @@ input{
     padding: 4px;
     color:#fff;
 }
+.price input {
+    width: 20%;
+    min-width: 60px; /* يمنع المدخلات إنها تصغر زيادة عن اللزوم */
+}
 input:focus{
 background: #000000;
-transform: scale(1.1);
+
 }
 .price input{
     width: 20%;
@@ -42,7 +48,8 @@ transform: scale(1.1);
     background: #850264;
     padding: 5px 2px;
     border-radius: 4px;
-    width: 250px;
+    width: auto;
+    display: inline-block;
 }
 #total::before{
 content: 'total: ';
@@ -79,4 +86,26 @@ table th{
 }
 table th,td{
     padding: 5px;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+/* استجابة التصميم للموبايل */
+@media (max-width: 600px) {
+    .crud {
+        width: 95%; /* توسيع المساحة في الشاشات الصغيرة */
+    }
+    
+    .price {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .price input {
+        flex: 1; /* جعل مدخلات الأسعار تتقاسم المساحة تلقائياً */
+        width: 100%;
+    }
 }
